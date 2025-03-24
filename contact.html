@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="chatbot/chatbot.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Food <b style="color: #06C167;">Donate</b></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="profile.php">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.querySelector(".hamburger").onclick = function() {
+            document.querySelector(".nav-bar").classList.toggle("active");
+        };
+    </script>
+
+    <section class="cover"></section>
+
+    <h2 class="heading" style="margin: 20px;">Contact Us</h2>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <form action="feedback.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Send" name="feedback">
+        </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-info" style="padding: 10px;">
+        <p>Email: fooddonate@gmail.com</p>
+        <p>Phone: 555-555-5555</p>
+        <p>Address: Thiagarajar College</p>
+    </div>
+
+    <script type="text/javascript" src="chatbot/chatbot.js"></script>
+    <script type="text/javascript" src="chatbot/constants.js"></script>
+    <script type="text/javascript" src="chatbot/speech.js"></script>
+</body>
+</html>
